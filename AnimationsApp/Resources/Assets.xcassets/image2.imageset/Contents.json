@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "news__slider-air-jordan-1-retro-high-og-obsidian-1.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
