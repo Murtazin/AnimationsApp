@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "469470a04a243f64a7937fd7f1a3a285-700x700.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "filename" : "iconfinder_cross-24_103181.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

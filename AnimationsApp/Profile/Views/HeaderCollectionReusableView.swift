@@ -108,7 +108,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     
     private func setUpConstraints() {
         profileImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
+            make.top.equalTo(safeAreaLayoutGuide).inset(10)
             make.leading.equalToSuperview().inset(16)
             make.height.width.equalTo(60)
         }

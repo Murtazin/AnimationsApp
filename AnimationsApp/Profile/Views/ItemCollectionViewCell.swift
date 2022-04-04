@@ -3,9 +3,9 @@ import SnapKit
 
 class ItemCollectionViewCell: UICollectionViewCell {
     
-    // MARK: - Private properties
+    // MARK: - Lazy properties
     
-    private lazy var shopTitleLabel: UILabel = {
+     lazy var shopTitleLabel: UILabel = {
         let label = UILabel()
         label.text = nil
         label.textColor = .systemGray
@@ -14,7 +14,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var clothTitleLabel: UILabel = {
+     lazy var clothTitleLabel: UILabel = {
         let label = UILabel()
         label.text = nil
         label.textColor = .label
@@ -23,7 +23,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var sizesLabel: UILabel = {
+     lazy var sizesLabel: UILabel = {
         let label = UILabel()
         label.text = nil
         label.textColor = .systemGray
@@ -32,7 +32,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var oldPriceLabel: UILabel = {
+    lazy var oldPriceLabel: UILabel = {
         let label = UILabel()
         label.text = nil
         label.textColor = .systemGray
@@ -41,7 +41,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var newPriceLabel: UILabel = {
+     lazy var newPriceLabel: UILabel = {
         let label = UILabel()
         label.text = nil
         label.textColor = .systemBlue
@@ -50,7 +50,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var imageView: UIImageView = {
+     lazy var imageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
         image.clipsToBounds = true
@@ -60,7 +60,7 @@ class ItemCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Other properties
     
-    public var data: ItemData? {
+    public var data: Item? {
         didSet {
             guard let data = data else {
                 return

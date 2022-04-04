@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-struct ItemData {
+struct Item {
     var shopTitle: String
     var clothTitle: String
     var sizes: [String]
