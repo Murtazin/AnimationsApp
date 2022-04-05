@@ -122,7 +122,7 @@ class HeaderCollectionReusableView: UICollectionReusableView {
         }
         subscribesSettingsButton.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(16)
-            make.top.equalTo(profileSettingsButton).inset(40)
+            make.top.equalTo(profileSettingsButton).inset(35)
         }
         myClothesLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(16)
@@ -137,8 +137,8 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     private func setUpAnimationsForSettingsButtons() {
         UIView.animateKeyframes(withDuration: 3.0, delay: 0.1, options: [.autoreverse]) {
             UIView.addKeyframe(withRelativeStartTime: 0.2, relativeDuration: 0.9) {
-                self.profileSettingsButton.transform = .init(translationX: 0, y: 40)
-                self.subscribesSettingsButton.transform = .init(translationX: 0, y: -40)
+                self.profileSettingsButton.transform = .init(translationX: 0, y: 35)
+                self.subscribesSettingsButton.transform = .init(translationX: 0, y: -35)
             }
         } completion: { _ in
             self.profileSettingsButton.transform = .identity
@@ -148,13 +148,19 @@ class HeaderCollectionReusableView: UICollectionReusableView {
     }
     
     private func setUpPropertyAnimator() {
-        propertyAnimator = UIViewPropertyAnimator(duration: 0.0, curve: .linear, animations: {
-            self.layoutIfNeeded()
+        propertyAnimator = UIViewPropertyAnimator(duration: 3.0, curve: .easeInOut, animations: {
             self.profileImageView.transform = CGAffineTransform(translationX: 285, y: 0)
             self.profileImageView.tintColor = .label
             self.fullNameLabel.transform = CGAffineTransform(translationX: -185, y: 0)
             self.fullNameLabel.alpha = 0
+            self.propertyAnimator.addCompletion { position in
+                self.profileImageView.transform = .identity
+                self.profileImageView.tintColor = .systemBlue
+                self.fullNameLabel.transform = .identity
+                self.fullNameLabel.alpha = 1
+            }
         })
+        propertyAnimator.pausesOnCompletion = true
     }
     
     // MARK: - OBJC funcs

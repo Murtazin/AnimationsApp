@@ -51,7 +51,6 @@ class ProfileDetailViewController: UIViewController {
         itemImageView.image = data.clothImage
         itemImageView.contentMode = .scaleAspectFill
         itemLabel.text = data.clothTitle
-//        itemLabel.textColor = .red
         itemLabel.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
     }
     
@@ -63,7 +62,7 @@ class ProfileDetailViewController: UIViewController {
         }
         itemLabel.snp.makeConstraints { make in
             make.centerX.equalTo(itemImageView)
-            make.centerY.equalTo(itemImageView)
+            make.bottom.equalTo(itemImageView).offset(5)
         }
         closeButton.snp.makeConstraints { make in
             make.height.width.equalTo(45)

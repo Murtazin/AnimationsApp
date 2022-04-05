@@ -19,6 +19,8 @@
 		A24D2ED927F8E1E60087F2F7 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D2ED827F8E1E60087F2F7 /* ItemCollectionViewCell.swift */; };
 		A24D2EDC27F8E2560087F2F7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D2EDB27F8E2560087F2F7 /* Item.swift */; };
 		A2D6CBA327FB2F5100FC5795 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6CBA227FB2F5100FC5795 /* Animator.swift */; };
+		A2D6CBA827FB4E3200FC5795 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6CBA727FB4E3200FC5795 /* CollectionView.swift */; };
+		A2D6CBAA27FB4EFF00FC5795 /* TransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D6CBA927FB4EFF00FC5795 /* TransitionDelegate.swift */; };
 		EDB5E84692BB2EB6B0B3FF59 /* Pods_AnimationsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4AB0F2F0C50ED4DC08A3C0A /* Pods_AnimationsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		A24D2ED827F8E1E60087F2F7 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		A24D2EDB27F8E2560087F2F7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A2D6CBA227FB2F5100FC5795 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		A2D6CBA727FB4E3200FC5795 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		A2D6CBA927FB4EFF00FC5795 /* TransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDelegate.swift; sourceTree = "<group>"; };
 		D4AB0F2F0C50ED4DC08A3C0A /* Pods_AnimationsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,11 +99,12 @@
 		A24D2ED027F8E1480087F2F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A2D6CBA527FB4DF600FC5795 /* ProfileDetail */,
+				A2D6CBA427FB4DEB00FC5795 /* Profile */,
 				A24D2ED827F8E1E60087F2F7 /* ItemCollectionViewCell.swift */,
 				A24D2ED227F8E17D0087F2F7 /* HeaderCollectionReusableView.swift */,
 				A24D2ED427F8E19B0087F2F7 /* ProfileViewController.swift */,
 				A24D2ED627F8E1AD0087F2F7 /* ProfileView.swift */,
-				A221B66E27FA2EB80065A1FD /* ProfileDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -130,6 +135,31 @@
 				A24D2EC727F853470087F2F7 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A2D6CBA427FB4DEB00FC5795 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A2D6CBA627FB4E0B00FC5795 /* Extensions */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A2D6CBA527FB4DF600FC5795 /* ProfileDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A221B66E27FA2EB80065A1FD /* ProfileDetailViewController.swift */,
+			);
+			path = ProfileDetail;
+			sourceTree = "<group>";
+		};
+		A2D6CBA627FB4E0B00FC5795 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A2D6CBA727FB4E3200FC5795 /* CollectionView.swift */,
+				A2D6CBA927FB4EFF00FC5795 /* TransitionDelegate.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C64C116E12CB0D4576529112 /* Frameworks */ = {
@@ -266,10 +296,12 @@
 			files = (
 				A2D6CBA327FB2F5100FC5795 /* Animator.swift in Sources */,
 				A24D2ED327F8E17D0087F2F7 /* HeaderCollectionReusableView.swift in Sources */,
+				A2D6CBA827FB4E3200FC5795 /* CollectionView.swift in Sources */,
 				A221B66F27FA2EB80065A1FD /* ProfileDetailViewController.swift in Sources */,
 				A24D2EDC27F8E2560087F2F7 /* Item.swift in Sources */,
 				A24D2ED527F8E19B0087F2F7 /* ProfileViewController.swift in Sources */,
 				A24D2ED927F8E1E60087F2F7 /* ItemCollectionViewCell.swift in Sources */,
+				A2D6CBAA27FB4EFF00FC5795 /* TransitionDelegate.swift in Sources */,
 				A24D2EBA27F853460087F2F7 /* AppDelegate.swift in Sources */,
 				A24D2ED727F8E1AD0087F2F7 /* ProfileView.swift in Sources */,
 				A24D2EBC27F853460087F2F7 /* SceneDelegate.swift in Sources */,

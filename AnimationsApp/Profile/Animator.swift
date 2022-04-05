@@ -10,18 +10,17 @@ enum PresentationType {
     }
 }
 
-final class Animator: NSObject, UIViewControllerAnimatedTransitioning {
+final class Animator: NSObject {
     
-    // MARK: - Properties
+    // MARK: - Private properties
     
-    static let duration: TimeInterval = 1.25
+    private static let duration: TimeInterval = 1.25
     
     private let type: PresentationType
     private let firstViewController: ProfileViewController
     private let secondViewController: ProfileDetailViewController
     private var selectedCellImageViewSnapshot: UIView
     private let cellImageViewRect: CGRect
-    
     private let cellLabelRect: CGRect
     
     // MARK: - Initializers
@@ -39,9 +38,12 @@ final class Animator: NSObject, UIViewControllerAnimatedTransitioning {
         self.cellImageViewRect = selectedCell.imageView.convert(selectedCell.imageView.bounds, to: window)
         self.cellLabelRect = selectedCell.clothTitleLabel.convert(selectedCell.clothTitleLabel.bounds, to: window)
     }
+}
+
+// MARK: - UIViewControllerAnimatedTransitioning
+
+extension Animator: UIViewControllerAnimatedTransitioning {
     
-    // MARK: - UIViewControllerAnimatedTransitioning funcs
-        
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return Self.duration
     }
